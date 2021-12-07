@@ -1,95 +1,42 @@
-# Flights full-stack recruitment test
+# Flights back-end recruitment test
 
-Thanks for taking the time to do our full-stack coding test. The challenge has two parts:
+Thanks for taking the time to do our back-end coding test. The challenge has two parts:
 
 1) A [task](#task) to create a flights REST API.
 
-2) A [task](#task) to create a basic flights results front-end site to show flight prices.
+2) A [task](#task) to display basic flights results in the Django Administration Site.
 
 ----
 
-You will be graded based on the following have been met:
+## Tasks
 
-* Your implementation works as described in the [task](#task).
+**REST API**
 
-* Your solution looks like the provided [design](#design).
+  - Fetch flight results from the provided `flights.json` (https://raw.githubusercontent.com/Skyscanner/full-stack-recruitment-test/main/public/flights.json) and save them into a SQLite database. The models created and their relationships are up to you.
+  - Create an endpoint to LIST all of the flights with at least one query param to filter. The choice of the filter/filters is to be decided by your own criteria.
 
-----
+**Django Administration**
 
-## Prerequisites/Environment Setup
-
-### Installing Node
-
-The full stack test is developed using Node, using the following versions:
-
-  **Node:** `LTS/Erbium (^12.13.0)`
-
-  **npm:** `^6.12.0`
-
-We recommend using [nvm](https://github.com/nvm-sh/nvm) or [nave](https://github.com/isaacs/nave) to manage your Node environment on **Unix/macOS** systems. If you use **Windows** then we recommend using [nvm-windows](https://github.com/coreybutler/nvm-windows).
-
-To install the correct npm and node version for the project, use `nvm install` or `nave install`.
-
-The full stack test has built-in support for these. Just run `nvm use` or `nave auto` to select the correct Node version.
-
-## Task
-
-We have placed a number of helpful todos inside the code (see `index.js` and `App.jsx`) to help get you started, the main items we are looking for are:
-
-- Fetch flight results from the provided `flights.json` and format them into client readable results.
-  - You are not required to serve this separately from the dev server (i.e. `npm start`).
-
-- Use the returned data to display a page of results that matches the given design.
-  - Times should be displayed in 24 hour format.
-
-## Design
-
-We've provided a [design](./designs/results-small.png) for small-screens (480px). Don't worry about tackling larger breakpoints, but **please make sure your solution looks good at 480px in portrait orientation**.
-
-The design shows a look and feel defined in our [styleguide](https://backpack.github.io/). Feel free to import our React components into your project, or lift colours and things directly from the styleguide pages. We also have some auto-generated [sassdoc](https://backpack.github.io/sassdoc/) that may help.
-
-**NB:** You don't have to use our styleguide or our components -- picking colours from the image and rolling your own css to save time is absolutely fine.
-
-For the airline logos, insert the airline id to the following url: `https://logos.skyscnr.com/images/airlines/favicon/{id}.png`
-
-## Client implementation
-
-We'd like you to use [React](https://facebook.github.io/react/). On top of that, use whatever front-end libraries you feel comfortable with.
-
-We've set you up with a build based on [our custom fork](https://backpack.github.io/using/backpack-react-scripts) of Facebook's [create-react-app](https://github.com/facebookincubator/create-react-app).
-
-We've wired in [Sass](http://sass-lang.com/) with our base stylesheet (`bpk-stylesheets`) + mixins (`bpk-mixins`) for you to get at -- see the [`Header`](./client/src/components/Header/Header.jsx) component for example use.
+- Use the returned data to display a page of the fetched results in a user-friendly manner in the Django Administration. The format, columns, and all of the display details are up to you.
 
 ## Flight results
 
-The provided `flights` `json` will return two collections of different items:
+The provided (https://raw.githubusercontent.com/Skyscanner/full-stack-recruitment-test/main/public/flights.json) will return two collections of different items:
 
 * **Itineraries** - These are the containers for your trips, tying together **Legs**, and **prices**. Prices are offered by an **agent** - an airline or travel agent.
 
 * **Legs** - These are journeys (outbound, return) with **duration**, **stops** and **airlines**.
 
-A good structure to represent trip options would be hierarchical:
-
-```
-Itineraries
-  Legs
-```
-
-## Running the project
-
-To startup the frontend client run the following command.
-
-* `npm start` - This will start the application for development
-* `npm run build` - Will create a production optimised build
-* `npm test` - Will run the front end tests
-
 ## Submission Guidelines
 
-* The zip file should be named {yourname}.zip, and should itself contain the full-stack-recruitment-test project folder with your submission.
+* A fork of this repository should be submitted to antonio@auxo.co with the implemented tasks in no less than 5h of the start of the assesment. However, the assesment is expected to take less than 3h. The amount of time you take to take the assesment has no effect in the results.
 
-* The zip file should contain the [FOLLOW-UP.md](./FOLLOW-UP.md) file with answers to the follow-up questions.
+## Evaluation Criteria
 
-* The zip file should **not** include the `node_modules` folder.
+* Your implementation works as described in the [task](#task).
+* Quality of the implemented code
+* Design decisions (models, JSON structure, relationships between entities, etc)
+* Videocall to explain the implemented code
 
 
 ----
