@@ -29,7 +29,7 @@ The provided (https://raw.githubusercontent.com/Skyscanner/full-stack-recruitmen
 
 ## Submission Guidelines
 
-* A fork of this repository should be submitted to antonio@auxo.co with the implemented tasks in no less than 5h of the start of the assesment. However, the assesment is expected to take less than 3h. The amount of time you take to take the assesment has no effect in the results.
+* A fork of this repository should be submitted to antonio@auxo.co with the implemented tasks in no less than 6h of the start of the assesment. However, the assesment is expected to take about 5h. The amount of time you take to take the assesment has no effect in the results.
 
 ## Evaluation Criteria
 
